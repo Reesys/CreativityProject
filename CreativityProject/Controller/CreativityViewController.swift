@@ -8,9 +8,10 @@
 
 import UIKit
 
-public class CreativityViewController: UICreativityController
+public class CreativityViewController: UIViewController
 {
-
+    @IBOutlet weak var CreativityButton: UIButton!
+    
     public override func viewDidLoad() -> Void
     {
         super.viewDidLoad()
