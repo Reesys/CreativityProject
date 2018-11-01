@@ -16,6 +16,9 @@ public class DrawingView: UIView {
     public override func draw(_ rect: CGRect) -> Void
     {
         // Drawing code
+        createStickFigure().stroke()
+        drawTurtle()
+        createLiam().stroke()
     }
     
     private func createStickFigure() -> UIBezierPath
@@ -31,7 +34,7 @@ public class DrawingView: UIView {
                       endAngle: CGFloat(2) * CGFloat.pi,
                       clockwise: true)
         
-        figure.move(to: CGPoint(x: 200, y: 200))
+        figure.move(to: CGPoint(x: 200, y: 220))
         figure.addLine(to: CGPoint(x: 200, y: 270))
         figure.move(to: CGPoint(x: 180, y: 240))
         figure.addLine(to: CGPoint(x: 220, y: 240))
@@ -41,6 +44,32 @@ public class DrawingView: UIView {
         figure.addLine(to: CGPoint(x: 220, y:300))
         
         return figure
+    }
+    
+    private func drawTurtle() -> Void
+    {
+        let logo = UIBezierPath()
+        UIColor.white.setFill()
+        logo.move(to: CGPoint(x: 50, y: 250))
+        logo.addLine(to: CGPoint(x: 100, y: 300))
+        logo.addLine(to: CGPoint(x: 50, y: 350))
+        logo.close()
+        logo.fill()
+    }
+    
+    private func createLiam() -> UIBezierPath
+    {
+        let figure2 : UIBezierPath = UIBezierPath()
+        
+        UIColor.yellow.setStroke()
+        figure2.lineWidth = 5.0
+        
+        figure2.addArc(withCenter: CGPoint(x: 3, y: 2), radius: CGFloat(30), startAngle: CGFloat(0), endAngle: CGFloat(3) * CGFloat.pi, clockwise: true)
+        
+        figure2.close()
+        figure2.fill()
+        
+        return figure2
     }
     
 }
