@@ -62,12 +62,18 @@ public class DrawingView: UIView {
         let figure2 : UIBezierPath = UIBezierPath()
         
         UIColor.yellow.setStroke()
-        figure2.lineWidth = 5.0
+        figure2.lineWidth = 7.0
         
-        figure2.addArc(withCenter: CGPoint(x: 3, y: 2), radius: CGFloat(30), startAngle: CGFloat(0), endAngle: CGFloat(3) * CGFloat.pi, clockwise: true)
+        figure2.addArc(withCenter: CGPoint(x: 80, y: 80), radius: CGFloat(30), startAngle: CGFloat(0), endAngle: CGFloat(3) * CGFloat.pi, clockwise: true)
         
-        figure2.close()
-        figure2.fill()
+        figure2.move(to: CGPoint(x: 300, y: 320))
+        figure2.addLine(to: CGPoint(x: 300, y: 370))
+        figure2.move(to: CGPoint(x: 280, y: 340))
+        figure2.addLine(to: CGPoint(x: 320, y: 340))
+        figure2.move(to: CGPoint(x: 300, y: 370))
+        figure2.addLine(to: CGPoint(x: 280, y: 400))
+        figure2.move(to: CGPoint(x: 300, y: 370))
+        figure2.addLine(to: CGPoint(x: 320, y:400))
         
         return figure2
     }
