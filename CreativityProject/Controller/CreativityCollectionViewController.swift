@@ -72,8 +72,47 @@ public class CreativityCollectionViewController: UICollectionViewController
 
     // MARK: UICollectionViewDataSource
 
-    // MARK: UICollectionViewDelegate
+    public override func numberOfSections(in collectionView: UICollectionView) -> Int
+    {
+        return 1
+    }
 
+
+    public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return creativeCS.count
+    }
+
+    public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+    
+        // Configure the cell
+    
+        return cell
+    }
+
+    // MARK: UICollectionViewDelegate
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let paddingSpace = sectionInsets.left * (itemPerRowCompact + 1)
+        let availableWidth = view.frame.width - paddingSpace
+        let widthPerItem = availableWidth / itemPerRowCompact
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtsection: Int) -> UIEdgeInsets
+    {
+        return sectionInsets
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat
+    {
+        return sectionInsets.left
+    }
+    
     /*
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool
