@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD207925219372410090D13F /* CreativityCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD207924219372410090D13F /* CreativityCollectionViewController.swift */; };
+		CD207929219381F60090D13F /* CreativityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD207928219381F60090D13F /* CreativityCell.swift */; };
 		CDC8A221218B732700107A70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8A220218B732700107A70 /* AppDelegate.swift */; };
 		CDC8A223218B732700107A70 /* CreativityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC8A222218B732700107A70 /* CreativityViewController.swift */; };
 		CDC8A226218B732700107A70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDC8A224218B732700107A70 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		CD207924219372410090D13F /* CreativityCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativityCollectionViewController.swift; sourceTree = "<group>"; };
+		CD207928219381F60090D13F /* CreativityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativityCell.swift; sourceTree = "<group>"; };
 		CDC8A21D218B732700107A70 /* CreativityProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreativityProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDC8A220218B732700107A70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDC8A222218B732700107A70 /* CreativityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativityViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				CDC8A224218B732700107A70 /* Main.storyboard */,
 				CDC8A229218B732800107A70 /* LaunchScreen.storyboard */,
 				CDC8A238218B7D1300107A70 /* DrawingView.swift */,
+				CD207928219381F60090D13F /* CreativityCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD207929219381F60090D13F /* CreativityCell.swift in Sources */,
 				CDC8A239218B7D1300107A70 /* DrawingView.swift in Sources */,
 				CDC8A223218B732700107A70 /* CreativityViewController.swift in Sources */,
 				CD207925219372410090D13F /* CreativityCollectionViewController.swift in Sources */,
